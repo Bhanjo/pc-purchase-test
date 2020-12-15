@@ -38,24 +38,7 @@ q:before, q:after {
     content: none;
 }
 
-/* 메인 스타일 */
-.contentWrap {
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: antiquewhite;
-    padding: 3rem 3rem;
-    text-align: center;
-}
-.titleIntro {
-    margin: 0 auto;
-}
-.startBtn {
-    margin-top: 1.5rem;
-}
-.goSurveyPage {
-    
-}
-.goSurveyPage:hover {
-    cursor: pointer;
+/* 콘텐츠 스타일 */
+.questionInner {
+    border: 1px rgb(206, 206, 206) solid;
 }
