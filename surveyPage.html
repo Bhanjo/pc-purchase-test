@@ -12,18 +12,18 @@
         <div class="progressbar">진행상황</div>
 
         <div class="surveyWrap">
-            <!-- 질문목록 총 20문항-->
+            <!--
+                질문목록 총 20문항
+                ckPer : 성능 / ckPri : 가격 / ckInt : 지식 / ckPrac : 실용성
+            -->
             <div class="questionInner" style="display: block;">
                 <div class="questionPart">
                     <a>질문 1<br>컴퓨터는 최소 1년마다 업그래이드해야한다.</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner1">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPer1" value="10">1~2년마다는 업그레이드해야지
+                        <input type="radio" name="ckPer1" value="0">너무 짧은거 아니야?
                     </div>
                 </div>
             </div>
@@ -33,165 +33,129 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner2">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckInt1" value="0">들어만봤지 뭐가 뭔지 모르겠어
+                        <input type="radio" name="ckInt1" value="10">(코어와 스레드에 대해 설명한다)
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 3<br>주로 고사양게임이나 작업을 많이한다</a>
+                    <a>질문 3<br>컴퓨터로 주로 하는 것은?</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner3">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPer2" value="10">배틀그라운드와 같은 고사양게임 혹은 영상편집이나 3D작업을 주로한다.
+                        <input type="radio" name="ckPer2" value="0">유튜브, 넷플릭스 등 영상시청이나 문서작업을 주로한다.
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 4<br>컴퓨터를 맞출때 이왕 살거 비싼걸로 산다 </a>
+                    <a>질문 4<br>컴퓨터를 맞출때 이왕 산거</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner4">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPrac1" value="0">이왕산거 성능 빵빵하게!
+                        <input type="radio" name="ckPrac1" value="20">내 목적에 맞는 사양으로
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 5<br>컴퓨터를 맞출때 주변인이나 견적사이트에서 추천해주는대로 산다</a>
+                    <a>질문 5<br>컴퓨터를 견적짤때</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner5">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckInt2" value="0">지인이나 인터넷에 견적좀 짜달라고 부탁한다
+                        <input type="radio" name="ckInt2" value="10">내가 스스로 견적을 짠다
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 6<br>게임중 간혹 프레임드랍이 발생한다. 업그레이드해야할까?</a>
+                    <a>질문 6<br>컴퓨터 사용중 자주 버벅거린다.</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner6">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPri1" value="10">아예 못할정도만 아니니까 그대로 쓴다
+                        <input type="radio" name="ckPri1" value="0">답답함에 컴퓨터를 업그레이드한다
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 7<br>50의 성능이 필요한 프로그램이 있을때 성능 80짜리 컴퓨터를 구입해야하는가?</a>
+                    <a>질문 7<br>50의 성능이 필요하다 작업이 있다</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner7">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPrac2" value="0">혹시모르니 성능 80짜리 컴퓨터를 구비해야지
+                        <input type="radio" name="ckPrac2" value="10">성능 60인 컴퓨터면 충분하지
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 8<br>100만원 상당의 컴퓨터는 고사양이라 생각하는가?</a>
+                    <a>질문 8<br>컴퓨터가 100만원이 조금 넘어간다</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner8">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPri2" value="10">너무 비싼거 아니야?
+                        <input type="radio" name="ckPri2" value="0">이정도면 평균적인 사양이지
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 9<br>운영체제를 직접 설치할 수 있는가?</a>
+                    <a>질문 9<br>운영체제를 직접 설치하고 세팅할 수 있는가?</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner9">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckInt3" value="10">누워서 떡먹기지
+                        <input type="radio" name="ckInt3" value="0">그런거 할줄 몰라..
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 10<br>브랜드에서 만든 완제품을 선호하는가?(ex 삼성오디세이 컴퓨터 등)</a>
+                    <a>질문 10<br>브랜드에서 만든 완제품을 선호하는가?</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner10">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPri3" value="0">브랜드에서 사는게 더 좋지
+                        <input type="radio" name="ckPri3" value="10">내가 직접 견적내는게 더 좋지
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 11<br>제품의 성능을 올려주는 대신 수명이 떨어지는 기술을 쓸것인가?</a>
+                    <a>질문 11<br>성능을 올려주는 대신 수명이 떨어지는 기술을 쓸것인가?</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner11">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPer3" value="10">성능 올릴수만 있으면 오버클럭이든 뭐든 해야지
+                        <input type="radio" name="ckPer3" value="0">위험하니까 안쓸거야
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 12<br>완전히 같은사양인 두 제품의 가격 차이가 3만원일때, 인지도가 높은 제품을 산다.</a>
+                    <a>질문 12<br>완전히 같은사양인 두 제품의 가격 차이가 3만원일때</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner12">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPrac3" value="15">더 싼 곳의 제품을 산다
+                        <input type="radio" name="ckPrac3" value="0">인지도가 높은 회사의 제품을 산다
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 13<br>노트북 구매시 가벼운 것보단 고사양인 노트북을 구매한다.</a>
+                    <a>질문 13<br>노트북 구매할때</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner13">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPrac4" value="10">사양이 낮더라도 가벼운거가 최고지
+                        <input type="radio" name="ckPrac4" value="0">무거워도 성능이 좋아야해
                     </div>
                 </div>
             </div>
@@ -201,11 +165,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner14">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPri4" value="10">AS는 받을일이 거의 없으니까 싼거
+                        <input type="radio" name="ckPri4" value="0">언제 고장날지 모르니까 비싸더리도 AS가 확실한곳!
                     </div>
                 </div>
             </div>
@@ -215,11 +176,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner15">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckInt4" value="10">오버클럭이란 어쩌고 저쩌고...
+                        <input type="radio" name="ckInt4" value="0">그런거 몰라
                     </div>
                 </div>
             </div>
@@ -229,39 +187,30 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner16">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckInt5" value="10">할 수 있지
+                        <input type="radio" name="ckInt5" value="0">한번도 안해봐서 못하겠어..
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 17<br>컴퓨터가 모니터의 제성능을 내지 못하더라도 UHD(4k) 144hz 모니터를 산다</a>
+                    <a>질문 17<br>컴퓨터가 모니터의 성능을 다 못끌어낼때 4k 모니터를</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner17">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPrac5" value="15">사양을 뽑아낼 수 있는 모니터를 산다
+                        <input type="radio" name="ckPrac5" value="0">그래도 UHD(4K) 모니터를 산다
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 18<br>A제품은 70점, B제품은 72점일때, B제품은 2주를 더 기다려야한다 B제품을 사야하는가?</a>
+                    <a>질문 18<br>A제품은 70점, B제품은 72점일때, B제품은 2주를 더 기다려야한다</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner18">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPer4" value="10">2점차이면 크지... 더 기다린다
+                        <input type="radio" name="ckPer4" value="0">별로 차이 안나는데 빨리오는걸로 사야지
                     </div>
                 </div>
             </div>
@@ -271,25 +220,19 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner19">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPri2" value="10">별로 많이하지 않는다
+                        <input type="radio" name="ckPri2" value="0">주말은 컴퓨터와 함께
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 20<br>cpu를 해외직구로 사는게 3만원 더 싸다. 해외직구로 사야하는가?(해외직구경험이 없다 가정)</a>
+                    <a>질문 20<br>해외직구를 해본적이 없는데 해외직구로 사는게 4만원 더 싸다.</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner20">
-                        <a>매우그렇지않다
-                        <a>그렇지않다
-                        <a>보통
-                        <a>그렇다
-                        <a>매우그렇다
+                        <input type="radio" name="ckPri5" value="10">어렵더라도 직구로 사야지
+                        <input type="radio" name="ckPri5" value="0">한번도 안해봤으니까 국내에서 사야지
                     </div>
                 </div>
             </div>
