@@ -14,7 +14,7 @@ function nextSurvey() {
     preBtn[0].style.display="inline";
     if(index == x.length) {
         submitBtn[0].style.display="block";
-        preBtn[0].style.display="none";
+        // preBtn[0].style.display="none";
         nextBtn[0].style.display="none";
     }
 }
@@ -26,8 +26,8 @@ function previousSurvey() {
     }
     index--;
     x[index-1].style.display = "block";
+    nextBtn[0].style.display="inline";
     if(index == 1) {
         preBtn[0].style.display="none";
-        console.log("시작");
     }
 }
