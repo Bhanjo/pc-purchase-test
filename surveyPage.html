@@ -11,7 +11,7 @@
     <div class="mainWrap">
         <div class="progressbar">진행상황</div>
 
-        <div class="surveyWrap">
+        <div class="surveyWrap" style="display: block;">
             <!--
                 질문목록 총 20문항
                 ckPer : 성능 / ckPri : 가격 / ckInt : 지식 / ckPrac : 실용성
@@ -22,7 +22,7 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner1">
-                        <li><input type="radio" name="ckPer1" value="10">1~2년마다는 업그레이드해야지</li>
+                        <li><input type="radio" name="ckPer1" value="10" checked="checked">1~2년마다는 업그레이드해야지</li>
                         <li><input type="radio" name="ckPer1" value="0">너무 짧은거 아니야?</li>
                     </div>
                 </div>
@@ -34,8 +34,7 @@
                 <div class="answerPart">
                     <div class="answerInner2">
                         <li><input type="radio" name="ckInt1" value="0">들어만봤지 뭐가 뭔지 모르겠어</li>
-                        <li><input type="radio" name="ckInt1" value="10">(코어와 스레드에 대해 설명한다)</li>
-
+                        <li><input type="radio" name="ckInt1" value="10" checked="checked">(코어와 스레드에 대해 설명한다)</li>
                     </div>
                 </div>
             </div>
@@ -46,7 +45,7 @@
                 <div class="answerPart">
                     <div class="answerInner3">
                         <li><input type="radio" name="ckPer2" value="10">고사양게임 혹은 영상편집이나 3D작업을 주로한다.</li>
-                        <li><input type="radio" name="ckPer2" value="0">유튜브, 넷플릭스 등 영상시청이나 문서작업을 주로한다.</li>
+                        <li><input type="radio" name="ckPer2" value="0">영상시청이나 문서작업을 주로한다.</li>
                     </div>
                 </div>
             </div>
@@ -101,7 +100,7 @@
                 <div class="answerPart">
                     <div class="answerInner8">
                         <li><input type="radio" name="ckPri2" value="10">너무 비싼거 아니야?</li>
-                        <li><input type="radio" name="ckPri2" value="0">이정도면 평균적인 사양이지</li>
+                        <li><input type="radio" name="ckPri2" value="0">이정도면 평균적인 가격이지</li>
                     </div>
                 </div>
             </div>
@@ -178,7 +177,7 @@
                 <div class="answerPart">
                     <div class="answerInner15">
                         <li><input type="radio" name="ckInt4" value="10">오버클럭이란 어쩌고 저쩌고...</li>
-                        <li><input type="radio" name="ckInt4" value="0">그런거 몰라</li>
+                        <li><input type="radio" name="ckInt4" value="0">자리를 떠난다</li>
                     </div>
                 </div>
             </div>
@@ -188,8 +187,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner16">
-                        <li><input type="radio" name="ckInt5" value="10">할 수 있지</li>
-                        <li><input type="radio" name="ckInt5" value="0">한번도 안해봐서 못하겠어..</li>
+                        <li><input type="radio" name="ckInt5" value="10">당연하지</li>
+                        <li><input type="radio" name="ckInt5" value="0">잘못될까봐 못하겠어</li>
                     </div>
                 </div>
             </div>
@@ -199,30 +198,31 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner17">
-                        <li><input type="radio" name="ckPrac5" value="15">사양을 뽑아낼 수 있는 모니터를 산다</li>
+                        <li><input type="radio" name="ckPrac5" value="15">사양에 맞는 다른 모니터를 산다</li>
                         <li><input type="radio" name="ckPrac5" value="0">그래도 UHD(4K) 모니터를 산다</li>
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 18<br>A제품보다 성능이 2점 더 좋은 B제품이 배송이 2주일때</a>
+                    <a>질문 18<br>A제품보다 성능이 3점 더 좋은 B제품이 배송이 2주일때</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner18">
-                        <li><input type="radio" name="ckPer4" value="10">2점차이면 크지... B제품으로 산다</li>
+                        <li><input type="radio" name="ckPer4" value="10">3점차이면 크지.. B제품으로 산다</li>
                         <li><input type="radio" name="ckPer4" value="0">빨리 도착하는 A제품으로 산다</li>
                     </div>
                 </div>
             </div>
+            <!-- 질문19 성능쪽으로 다시 구현하기 -->
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 19<br>쉬는날에는 컴퓨터를 많이하는편이다.</a>
+                    <a>질문 19<br>성능관련 질문 5번</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner19">
-                        <li><input type="radio" name="ckPri2" value="10">별로 많이하지 않는다</li>
-                        <li><input type="radio" name="ckPri2" value="0">주말은 컴퓨터와 함께</li>
+                        <li><input type="radio" name="ckPer5" value="0">변화없음</li>
+                        <li><input type="radio" name="ckPer5" value="10">값증가</li>
                     </div>
                 </div>
             </div>
@@ -241,12 +241,19 @@
             <div class="pageBtn">
                 <a class="previousBtn" onclick="previousSurvey()" style="display:none;">이전</a>
                 <a class="nextBtn" onclick="nextSurvey()">다음</a>
-                <a class="submitBtn" href="resultPage.html" style="display:none;">제출</a>
+                <a class="submitBtn" onclick="totalSum()" style="display:none;">제출</a>
             </div>
-        </div>
 
+        </div>
+        
+        <!-- 결과페이지 -->
+        <div id="resultInner" style="display: none;">
+            결과입니다.
+        </div>
+    
     </div>
     <script src="hiddenSurvey.js"></script>
+    <script src="calScore.js"></script>
 </body>
 
 </html>
