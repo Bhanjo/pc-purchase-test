@@ -24,6 +24,7 @@ const ckPrac5 = document.getElementsByName("ckPrac5");
 
 // resultNum이란 변수명으로 잘못 선언했는데 resultInner를 그대로 인식했음 새로운 문법인가?
 const resultInner = document.getElementById("resultInner");
+const mytest = document.getElementById("mytest");
 const surveyWrap = document.getElementsByClassName("surveyWrap");
 
 // per와 pri는 50으로 바꾸기
@@ -35,114 +36,138 @@ let point = 0;
 
 function totalSum() {
     // 성능
-    if(ckPer1[0].checked==true){
+    if (ckPer1[0].checked == true) {
         sumPer += 10;
         console.log("성능값은 " + sumPer);
     }
 
-    if(ckPer2[0].checked==true){
+    if (ckPer2[0].checked == true) {
         sumPer += 10;
         console.log("성능값은 " + sumPer);
     }
 
-    if(ckPer3[0].checked==true){
+    if (ckPer3[0].checked == true) {
         sumPer += 10;
         console.log("성능값은 " + sumPer);
     }
 
-    if(ckPer4[0].checked==true){
+    if (ckPer4[0].checked == true) {
         sumPer += 10;
         console.log("성능값은 " + sumPer);
     }
 
-    if(ckPer5[1].checked==true){
+    if (ckPer5[1].checked == true) {
         sumPer += 10;
         console.log("성능값은 " + sumPer);
     }
 
     // 가격
-    if(ckPri1[0].checked==true){
+    if (ckPri1[0].checked == true) {
         sumPri += 10;
         console.log("가격값은 " + sumPer);
     }
 
-    if(ckPri2[0].checked==true){
+    if (ckPri2[0].checked == true) {
         sumPri += 10;
         console.log("가격값은 " + sumPer);
     }
 
-    if(ckPri3[1].checked==true){
+    if (ckPri3[1].checked == true) {
         sumPri += 10;
         console.log("가격값은 " + sumPer);
     }
 
-    if(ckPri4[0].checked==true){
+    if (ckPri4[0].checked == true) {
         sumPri += 10;
         console.log("가격값은 " + sumPer);
     }
 
-    if(ckPri5
-        [0].checked==true){
+    if (ckPri5
+    [0].checked == true) {
         sumPri += 10;
         console.log("가격값은 " + sumPer);
     }
 
     // 지식
-    if(ckInt1[1].checked==true) {
+    if (ckInt1[1].checked == true) {
         sumInt += 10;
         console.log("지식값은 " + sumInt);
     }
 
-    if(ckInt2[1].checked==true) {
+    if (ckInt2[1].checked == true) {
         sumInt += 10;
         console.log("지식값은 " + sumInt);
     }
 
-    if(ckInt3[0].checked==true) {
+    if (ckInt3[0].checked == true) {
         sumInt += 10;
         console.log("지식값은 " + sumInt);
     }
 
-    if(ckInt4[0].checked==true) {
+    if (ckInt4[0].checked == true) {
         sumInt += 10;
         console.log("지식값은 " + sumInt);
     }
 
-    if(ckInt5[0].checked==true) {
+    if (ckInt5[0].checked == true) {
         sumInt += 10;
         console.log("지식값은 " + sumInt);
     }
 
     // 실용
-    if(ckPrac1[1].checked==true) {
+    if (ckPrac1[1].checked == true) {
         sumPrac += 20;
         console.log("실용성값은 " + sumPrac);
     }
 
-    if(ckPrac2[1].checked==true) {
+    if (ckPrac2[1].checked == true) {
         sumPrac += 10;
         console.log("실용성값은 " + sumPrac);
     }
 
-    if(ckPrac3[0].checked==true) {
+    if (ckPrac3[0].checked == true) {
         sumPrac += 15;
         console.log("실용성값은 " + sumPrac);
     }
 
-    if(ckPrac4[0].checked==true) {
+    if (ckPrac4[0].checked == true) {
         sumPrac += 10;
         console.log("실용성값은 " + sumPrac);
     }
 
-    if(ckPrac5[0].checked==true) {
+    if (ckPrac5[0].checked == true) {
         sumPrac += 15;
         console.log("실용성값은 " + sumPrac);
     }
 
-    PerPripoint = sumPri-sumPer;
+    PerPripoint = sumPri - sumPer;
+    let myPurchase;
+    switch (true) {
+        case (PerPripoint <= -31):
+            myPurchase = `사이보그`;
+            break;
+        case (PerPripoint <= -11):
+            myPurchase = `매니아`;
+            break;
+        case (PerPripoint <= 10):
+            myPurchase = `나는야 균형의 신`;
+            break;
+        case (PerPripoint <= 30):
+            myPurchase = `가성비를 찾아서 하이에나`;
+            break;
+        case (PerPripoint <= -31):
+            myPurchase = `짠돌이`;
+            break;
+        default:
+            myPurchase = `에러! 케이스값의 예외발생`;
+            break;
+    }
+    const mytestText = `당신의 성향은.. ${myPurchase}`;
     const totalResult = `구매성향은 ${PerPripoint}이고 실용성은 ${sumPrac}이며 지식은 ${sumInt}입니다.`
     resultInner.innerText = totalResult;
+    mytest.innerText = mytestText;
     resultInner.style.display = "block";
+    mytest.style.display = "block";
     surveyWrap[0].style.display = "none";
 
 }
