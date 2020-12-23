@@ -4,13 +4,14 @@ const mytest = document.getElementById("mytest");
 const mytestDetail = document.getElementById("mytestDetail");
 const surveyWrap = document.getElementsByClassName("surveyWrap");
 const intResult = document.getElementById("intResult");
+const diffInner = document.getElementById("diffInner");
 
 // per와 pri는 50으로 바꾸기
 let sumPer = 50;
 let sumPri = 50;
 let sumInt = 0;
 let sumPrac = 0;
-let point = 0;
+// let point = 0;
 
 // 체크유무 확인하는 기능 만들기
 function resultText() {
@@ -73,26 +74,59 @@ function resultInt() {
     let myInt;
     switch (true) {
         case (sumInt <= 10):
-            myInt = `Lv.1`
+            myInt = `Lv.1`;
             break;
         case (sumInt <= 20):
-            myInt = `Lv.2`
+            myInt = `Lv.2`;
             break;
         case (sumInt <= 30):
-            myInt = `Lv.3`
+            myInt = `Lv.3`;
             break;
         case (sumInt <= 40):
-            myInt = `Lv.4`
+            myInt = `Lv.4`;
             break;
         case (sumInt <= 50):
-            myInt = `Lv.5`
+            myInt = `Lv.5`;
             break;
         default:
-            myInt = `에러!`
+            myInt = `에러!`;
             break;
     }
     intResult.innerText = myInt;
     intResult.style.display = "block";
+}
+
+function diffReult() {
+    let diffPoint = Math.abs(PerPripoint - sumPrac);
+    let diffText;
+    switch (true) {
+        case (diffPoint > 40):
+            diffText = `매우불일치`;
+            console.log(diffPoint);
+            break;
+        case (diffPoint <= 10):
+            diffText = `매우일치`;
+            console.log(diffPoint);
+            break;
+        case (diffPoint <= 20):
+            diffText = `일치`;
+            console.log(diffPoint);
+            break;
+        case (diffPoint <= 30):
+            diffText = `보통`;
+            console.log(diffPoint);
+            break;
+        case (diffPoint <= 40):
+            diffText = `불일치`;
+            console.log(diffPoint);
+            break;
+        default:
+            diffText = `에러!`;
+            console.log(diffPoint);
+            break;
+    }
+    diffInner.innerText = diffText;
+    diffInner.style.display = "block";
 }
 
 function totalSum() {
@@ -127,11 +161,14 @@ function totalSum() {
         if (ckPrac[l][1].checked == true) {
             sumPrac += 10;
             console.log(sumPrac)
+        } else if (ckPrac[l][0].checked == true) {
+            sumPrac -= 10;
+            console.log(sumPrac)
         }
     }
     PerPripoint = sumPri - sumPer;
     resultText();
     resultInt();
+    diffReult();
 }
-
 // 원래는 펑션별로 가격, 성능 등 값을 따로 구현하려다가 버튼 하나로 모든 펑션을 제어할 수 없어서 펑션을 통합함
