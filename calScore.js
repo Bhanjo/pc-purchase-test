@@ -180,8 +180,8 @@ function totalSum() {
 }
 
 // 답변클릭 이벤트
-function btnChange() {
-    deBtn.src="img/ckBtn23.png";
-}
+// function btnChange() {
+//     deBtn.src="img/ckBtn23.png";
+// }
 
 // 원래는 펑션별로 가격, 성능 등 값을 따로 구현하려다가 버튼 하나로 모든 펑션을 제어할 수 없어서 펑션을 통합함
