@@ -73,7 +73,8 @@ q:before, q:after {
 	padding-top: 2rem;
 }
 .answerPart input {
-	display: none;
+	/* 추후 이미지로 구현하기 */
+	/* display: none; */
 }
 .answerList {
 	display: flex;
@@ -88,13 +89,19 @@ q:before, q:after {
 }
 .pageBtn {
 	/* background-color: red; */
-	margin: 0 auto;
+	margin: 0.5rem auto;
 	text-align: center;
+	font-size: 2rem;
 }
 .previousBtn, .nextBtn {
 	/* text-align: center; */
 }
-.previousBtn:hover, .nextBtn:hover {
+.submitBtn {
+	width: 15%;
+	margin: 0 auto;
+	background-color: red;
+}
+.previousBtn:hover, .nextBtn:hover, .submitBtn:hover {
 	cursor: pointer;
 }
 .nextBtn {
