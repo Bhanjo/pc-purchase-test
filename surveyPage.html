@@ -9,9 +9,9 @@
 
 <body>
     <div class="mainWrap">
-        <div class="progressbar">진행상황</div>
+        <div class="progressbar">1 / 20</div>
 
-        <div class="surveyWrap" style="display: block;">
+        <div id="surveyWrap" style="display: block;">
             <!--
                 질문목록 총 20문항
                 ckPer : 성능 / ckPri : 가격 / ckInt : 지식 / ckPrac : 실용성
@@ -22,8 +22,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner1">
-                        <li><input type="radio" name="ckPer1" value="10" checked="checked">1~2년마다는 업그레이드해야지</li>
-                        <li><input type="radio" name="ckPer1" value="0">너무 짧은거 아니야?</li>
+                        <li><label for="ck1_1"><input type="radio" id="ck1_1" name="ckPer1" value="10">1~2년마다는 업그레이드해야지</li></label>
+                        <li><label for="ck1_2"><input type="radio" id="ck1_2" name="ckPer1" value="0">너무 짧은거 아니야?</li></label>
                     </div>
                 </div>
             </div>
@@ -33,8 +33,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner2">
-                        <li><input type="radio" name="ckInt1" value="0">들어만봤지 뭐가 뭔지 모르겠어</li>
-                        <li><input type="radio" name="ckInt1" value="10" checked="checked">(코어와 스레드에 대해 설명한다)</li>
+                        <li><label for="ck2_1"><input type="radio" id="ck2_1"name="ckInt1" value="0">들어만봤어</label></li>
+                        <li><label for="ck2_2"><input type="radio" id="ck2_2"name="ckInt1" value="10">설명할 수 있어</label></li>
                     </div>
                 </div>
             </div>
@@ -44,8 +44,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner3">
-                        <li><input type="radio" name="ckPer2" value="10">고사양게임 혹은 영상편집이나 3D작업을 주로한다.</li>
-                        <li><input type="radio" name="ckPer2" value="0">영상시청이나 문서작업을 주로한다.</li>
+                        <li><label for="ck3_1"><input type="radio" id="ck3_1" name="ckPer2" value="10">고사양게임 혹은 영상편집이나 3D작업</label></li>
+                        <li><label for="ck3_2"><input type="radio" id="ck3_2" name="ckPer2" value="0">영상시청이나 문서작업</label></li>
                     </div>
                 </div>
             </div>
@@ -55,19 +55,20 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner4">
-                        <li><input type="radio" name="ckPrac1" value="0">이왕산거 성능 빵빵하게!</li>
-                        <li><input type="radio" name="ckPrac1" value="10">내 목적에 맞는 사양으로</li>
+                        <li><label for="ck4_1"><input type="radio" id="ck4_1" name="ckPrac1" value="0">이왕산거 성능 빵빵하게!</label></li>
+                        <li><label for="ck4_2"><input type="radio" id="ck4_2" name="ckPrac1" value="10">내 목적에 맞는 사양으로</label></li>
                     </div>
                 </div>
             </div>
+            <!-- 라벨작업마무리하기 -->
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
                     <a>질문 5<br>컴퓨터를 견적짤때</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner5">
-                        <li><input type="radio" name="ckInt2" value="0">지인이나 인터넷에 견적좀 짜달라고 부탁한다</li>
-                        <li><input type="radio" name="ckInt2" value="10">내가 스스로 견적을 짠다</li>
+                        <li><label for="ck5_1"><input type="radio" id="ck5_1" name="ckInt2" value="0">지인이나 인터넷에 견적좀 짜달라고 부탁한다</label></li>
+                        <li><label for="ck5_2"><input type="radio" id="ck5_2" name="ckInt2" value="10">내가 스스로 견적낸다</label></li>
                     </div>
                 </div>
             </div>
@@ -77,8 +78,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner6">
-                        <li><input type="radio" name="ckPri1" value="10">아예 못할정도만 아니니까 그대로 쓴다</li>
-                        <li><input type="radio" name="ckPri1" value="0">답답함에 컴퓨터를 업그레이드한다</li>
+                        <li><label for="ck6_1"><input type="radio" id="ck6_1"name="ckPri1" value="10">아예 못할정도만 아니니까 그대로 쓴다</label></li>
+                        <li><label for="ck6_2"><input type="radio" id="ck6_2" name="ckPri1" value="0">답답함에 컴퓨터를 업그레이드한다</label></li>
                     </div>
                 </div>
             </div>
@@ -88,8 +89,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner7">
-                        <li><input type="radio" name="ckPrac2" value="0">혹시모르니 성능 80짜리 컴퓨터를 구비해야지</li>
-                        <li><input type="radio" name="ckPrac2" value="10">성능 60인 컴퓨터면 충분하지</li>
+                        <li><label for="ck7_1"><input type="radio" id="ck7_1" name="ckPrac2" value="0">혹시모르니 성능 80짜리 컴퓨터로 사야지</label></li>
+                        <li><label for="ck7_2"><input type="radio" id="ck7_1" name="ckPrac2" value="10">성능 60인 컴퓨터면 충분하지</label></li>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner8">
-                        <li><input type="radio" name="ckPri2" value="10">너무 비싼거 아니야?</li>
-                        <li><input type="radio" name="ckPri2" value="0">이정도면 평균적인 가격이지</li>
+                        <li><label for="ck8_1"><input type="radio" id="ck8_1" name="ckPri2" value="10">너무 비싼거 아니야?</label></li>
+                        <li><label for="ck8_2"><input type="radio" id="ck8_2" name="ckPri2" value="0">이정도면 평균적인 가격이네</label></li>
                     </div>
                 </div>
             </div>
@@ -110,8 +111,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner9">
-                        <li><input type="radio" name="ckInt3" value="0">그런거 할줄 몰라..</li>
-                        <li><input type="radio" name="ckInt3" value="10">누워서 떡먹기지</li>
+                        <li><label for="ck9_1"><input type="radio" id="ck9_1" name="ckInt3" value="0">못하겠어</label></li>
+                        <li><label for="ck9_2"><input type="radio" id="ck9_2" name="ckInt3" value="10">할줄알지</label></li>
                     </div>
                 </div>
             </div>
@@ -121,19 +122,19 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner10">
-                        <li><input type="radio" name="ckPri3" value="10">내가 직접 견적내는게 더 좋지</li>
-                        <li><input type="radio" name="ckPri3" value="0">브랜드에서 사는게 더 좋지</li>
+                        <li><label for="ck10_1"><input type="radio" id="ck10_1" name="ckPri3" value="10">내가 직접 견적내는게 더 좋아</label></li>
+                        <li><label for="ck10_2"><input type="radio" id="ck10_2" name="ckPri3" value="0">브랜드에서 사는게 더 좋아</label></li>
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 11<br>성능을 올려주는 대신 수명이 떨어지는 기술을 쓸것인가?</a>
+                    <a>질문 11<br>성능을 올려주는 대신 컴퓨터에 무리가 가는 기술이 있다</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner11">
-                        <li><input type="radio" name="ckPer3" value="10">성능 올릴수만 있으면 오버클럭이든 뭐든 해야지</li>
-                        <li><input type="radio" name="ckPer3" value="0">위험하니까 안쓸거야</li>
+                        <li><label for="ck11_1"><input type="radio" id="ck11_1" name="ckPer3" value="10">성능 올릴수만 있으면 뭐든 해야지</label></li>
+                        <li><label for="ck11_2"><input type="radio" id="ck11_2" name="ckPer3" value="0">위험하니까 안쓸거야</label></li>
                     </div>
                 </div>
             </div>
@@ -143,8 +144,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner12">
-                        <li><input type="radio" name="ckPrac3" value="0">인지도가 높은 회사의 제품을 산다</li>
-                        <li><input type="radio" name="ckPrac3" value="10">더 싼 곳의 제품을 산다</li>
+                        <li><label for="ck12_1"><input type="radio" id="ck12_1" name="ckPrac3" value="0">인지도가 높은 회사의 제품을 산다</label></li>
+                        <li><label for="ck12_2"><input type="radio" id="ck12_2" name="ckPrac3" value="10">더 싼 곳의 제품을 산다</label></li>
                     </div>
                 </div>
             </div>
@@ -154,8 +155,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner13">
-                        <li><input type="radio" name="ckPrac4" value="0">무거워도 성능이 좋아야해</li>
-                        <li><input type="radio" name="ckPrac4" value="10">사양이 낮더라도 가벼운거가 최고지</li>
+                        <li><label for="ck13_1"><input type="radio" id="ck13_1" name="ckPrac4" value="0">무거워도 성능이 좋아야해</label></li>
+                        <li><label for="ck13_2"><input type="radio" id="ck13_2" name="ckPrac4" value="10">사양이 낮더라도 가벼운거가 최고지</label></li>
                     </div>
                 </div>
             </div>
@@ -165,8 +166,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner14">
-                        <li><input type="radio" name="ckPri4" value="10">AS는 받을일이 거의 없으니까 싼거</li>
-                        <li><input type="radio" name="ckPri4" value="0">언제 고장날지 모르니까 비싸더리도 AS가 확실한곳!</li>
+                        <li><label for="ck14_1"><input type="radio" id="ck14_1" name="ckPri4" value="10">AS는 받을일이 거의 없으니까 싼거</label></li>
+                        <li><label for="ck14_2"><input type="radio" id="ck14_2" name="ckPri4" value="0">언제 고장날지 모르니까 비싸더리도 AS가 확실한곳!</label></li>
                     </div>
                 </div>
             </div>
@@ -176,8 +177,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner15">
-                        <li><input type="radio" name="ckInt4" value="0">자리를 떠난다</li>
-                        <li><input type="radio" name="ckInt4" value="10">오버클럭이란 어쩌고 저쩌고...</li>
+                        <li><label for="ck15_1"><input type="radio" id="ck15_1" name="ckInt4" value="0">No</label></li>
+                        <li><label for="ck15_2"><input type="radio" id="ck15_2" name="ckInt4" value="10">Yes</label></li>
                     </div>
                 </div>
             </div>
@@ -187,42 +188,42 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner16">
-                        <li><input type="radio" name="ckInt5" value="0">잘못될까봐 못하겠어</li>
-                        <li><input type="radio" name="ckInt5" value="10">당연하지</li>
+                        <li><label for="ck16_1"><input type="radio" id="ck16_1" name="ckInt5" value="0">잘못될까봐 못하겠어</label></li>
+                        <li><label for="ck16_2"><input type="radio" id="ck16_2" name="ckInt5" value="10">당연하지</label></li>
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 17<br>컴퓨터가 모니터의 성능을 다 못끌어낼때 4k 모니터를</a>
+                    <a>질문 17<br>컴퓨터 사양이 낮을때 4k 모니터를</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner17">
-                        <li><input type="radio" name="ckPrac5" value="0">그래도 UHD(4K) 모니터를 산다</li>
-                        <li><input type="radio" name="ckPrac5" value="10">사양에 맞는 다른 모니터를 산다</li>
+                        <li><label for="ck17_1"><input type="radio" id="ck17_1" name="ckPrac5" value="0">4K 모니터를 산다</label></li>
+                        <li><label for="ck17_2"><input type="radio" id="ck17_2" name="ckPrac5" value="10">사양에 맞는 다른 모니터를 산다</label></li>
                     </div>
                 </div>
             </div>
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 18<br>A제품보다 성능이 3점 더 좋은 B제품이 배송이 2주일때</a>
+                    <a>질문 18<br>A제품보다 성능이 3점 더 좋은 B제품이 있다</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner18">
-                        <li><input type="radio" name="ckPer4" value="10">3점차이면 크지.. B제품으로 산다</li>
-                        <li><input type="radio" name="ckPer4" value="0">빨리 도착하는 A제품으로 산다</li>
+                        <li><label for="ck18_1"><input type="radio" id="ck18_1" name="ckPer4" value="10">늦더라도 성능좋은 B제품으로 산다</label></li>
+                        <li><label for="ck18_2"><input type="radio" id="ck18_2" name="ckPer4" value="0">빨리 도착하는 A제품으로 산다</label></li>
                     </div>
                 </div>
             </div>
             <!-- 질문19 성능쪽으로 다시 구현하기 -->
             <div class="questionInner" style="display: none;">
                 <div class="questionPart">
-                    <a>질문 19<br>성능관련 질문 5번</a>
+                    <a>질문 19<br>기대했던 게임의 사양이 높다</a>
                 </div>
                 <div class="answerPart">
                     <div class="answerInner19">
-                        <li><input type="radio" name="ckPer5" value="10">값증가</li>
-                        <li><input type="radio" name="ckPer5" value="0">변화없음</li>
+                        <li><label for="ck19_1"><input type="radio" id="ck19_1" name="ckPer5" value="10">게임에 맞춰 컴퓨터 사양을 높인다</label></li>
+                        <li><label for="ck19_2"><input type="radio" id="ck19_2" name="ckPer5" value="0">게임옵션을 최대한 낮춘다</label></li>
                     </div>
                 </div>
             </div>
@@ -232,8 +233,8 @@
                 </div>
                 <div class="answerPart">
                     <div class="answerInner20">
-                        <li><input type="radio" name="ckPri5" value="10">어렵더라도 직구로 사야지</li>
-                        <li><input type="radio" name="ckPri5" value="0">한번도 안해봤으니까 국내에서 사야지</li>
+                        <li><input type="radio" name="ckPri5" value="10">어렵더라도 싼 직구로!</li>
+                        <li><input type="radio" name="ckPri5" value="0">편하고 빠른 국내!</li>
                     </div>
                 </div>
             </div>
