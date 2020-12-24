@@ -5,9 +5,9 @@ const nextBtn = document.getElementsByClassName("nextBtn");
 const x = document.getElementsByClassName("questionInner");
 const progressbar = document.querySelector(".progressbar");
 
+// 이전, 다음버튼 이벤트
 function nextSurvey() {
-    let i;
-    for(i = 0; i < x.length; i++) {
+    for(let i = 0; i < x.length; i++) {
         x[i].style.display="none";
     }
     index++;
@@ -23,8 +23,7 @@ function nextSurvey() {
 }
 
 function previousSurvey() {
-    let i;
-    for(i = 0; i < x.length; i++) {
+    for(let i = 0; i < x.length; i++) {
         x[i].style.display="none";
     }
     index--;

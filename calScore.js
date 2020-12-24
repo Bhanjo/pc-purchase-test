@@ -2,16 +2,19 @@
 const resultInner = document.getElementById("resultInner");
 const mytest = document.getElementById("mytest");
 const mytestDetail = document.getElementById("mytestDetail");
-const surveyWrap = document.getElementsByClassName("surveyWrap");
+const surveyWrap = document.getElementById("surveyWrap");
 const intResult = document.getElementById("intResult");
 const diffInner = document.getElementById("diffInner");
+
+const deBtn = document.getElementById("deBtn");
+const ckBtn = document.getElementById("ckBtn");
 
 // per와 pri는 50으로 바꾸기
 let sumPer = 50;
 let sumPri = 50;
 let sumInt = 0;
 let sumPrac = 0;
-// let point = 0;
+let point = 0;
 
 // 체크유무 확인하는 기능 만들기
 function resultText() {
@@ -67,7 +70,7 @@ function resultText() {
     resultInner.style.display = "block";
     mytest.style.display = "block";
     mytestDetail.style.display = "block";
-    surveyWrap[0].style.display = "none";
+    surveyWrap.style.display = "none";
 }
 
 function resultInt() {
@@ -129,34 +132,35 @@ function diffReult() {
     diffInner.style.display = "block";
 }
 
-function totalSum() {
-    const ckPer = new Array(5);
+const ckPer = new Array(5);
+const ckPri = new Array(5);
+const ckInt = new Array(5);
+const ckPrac = new Array(5);
+let i, j, k, l;
+function calSum() {
     // 궁금점 : ckPer는 2차원 배열선언을 안한거같은데 알아서 2차원으로 인식함
-    for (let i = 1; i <= 5; i++) {
+    for (i = 1; i <= 5; i++) {
         ckPer[i] = document.getElementsByName("ckPer" + i)
         if (ckPer[i][0].checked == true) {
             sumPer += 10;
             console.log(sumPer)
         }
     }
-    const ckPri = new Array(5);
-    for (let j = 1; j <= 5; j++) {
+    for (j = 1; j <= 5; j++) {
         ckPri[j] = document.getElementsByName("ckPri" + j)
         if (ckPri[j][0].checked == true) {
             sumPri += 10;
             console.log(sumPri)
         }
     }
-    const ckInt = new Array(5);
-    for (let k = 1; k <= 5; k++) {
+    for (k = 1; k <= 5; k++) {
         ckInt[k] = document.getElementsByName("ckInt" + k)
         if (ckInt[k][1].checked == true) {
             sumInt += 10;
             console.log(sumInt)
         }
     }
-    const ckPrac = new Array(5);
-    for (let l = 1; l <= 5; l++) {
+    for (l = 1; l <= 5; l++) {
         ckPrac[l] = document.getElementsByName("ckPrac" + l)
         if (ckPrac[l][1].checked == true) {
             sumPrac += 10;
@@ -167,8 +171,17 @@ function totalSum() {
         }
     }
     PerPripoint = sumPri - sumPer;
+}
+function totalSum() {
+    calSum();
     resultText();
     resultInt();
     diffReult();
 }
+
+// 답변클릭 이벤트
+function btnChange() {
+    deBtn.src="img/ckBtn23.png";
+}
+
 // 원래는 펑션별로 가격, 성능 등 값을 따로 구현하려다가 버튼 하나로 모든 펑션을 제어할 수 없어서 펑션을 통합함

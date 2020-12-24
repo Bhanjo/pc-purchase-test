@@ -67,21 +67,36 @@ q:before, q:after {
 	font-size: 2rem;
 }
 .answerPart {
-	font-size: 1.8rem;
+	font-size: 1.7rem;
 	text-align: left;
 	margin-left: 7rem;
 	padding-top: 2rem;
-	/* margin: 0 auto; */
 }
 .answerPart input {
-	display: flexbox;
-	/* background-color: red; */
+	display: none;
 }
-.answerPart input:hover {
-	
+.answerList {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 0.7rem;
+	align-items: center;
 }
-
-
+.answerList label:hover {
+	cursor: pointer;
+	background-color: #cfcfcf;
+	transition-duration: 0.5s;
+}
 .pageBtn {
-	text-align: center;	
+	/* background-color: red; */
+	margin: 0 auto;
+	text-align: center;
+}
+.previousBtn, .nextBtn {
+	/* text-align: center; */
+}
+.previousBtn:hover, .nextBtn:hover {
+	cursor: pointer;
+}
+.nextBtn {
+	margin-left: 3.5rem;
 }
