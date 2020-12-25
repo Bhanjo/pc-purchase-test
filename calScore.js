@@ -1,22 +1,15 @@
 // resultNum이란 변수명으로 잘못 선언했는데 resultInner를 그대로 인식했음 새로운 문법인가?
+// 원래는 펑션별로 가격, 성능 등 값을 따로 구현하려다가 버튼 하나로 모든 펑션을 제어할 수 없어서 펑션을 통합함
+// 체크유무 확인하는 기능 만들기
+
+// const intInner = document.getElementsByClassName("intInner");
+// const deBtn = document.getElementById("deBtn");
+// const ckBtn = document.getElementById("ckBtn");
+
 const resultInner = document.getElementById("resultInner");
 const mytest = document.getElementById("mytest");
 const mytestDetail = document.getElementById("mytestDetail");
 const surveyWrap = document.getElementById("surveyWrap");
-const intResult = document.getElementById("intResult");
-const diffInner = document.getElementById("diffInner");
-
-const deBtn = document.getElementById("deBtn");
-const ckBtn = document.getElementById("ckBtn");
-
-// per와 pri는 50으로 바꾸기
-let sumPer = 50;
-let sumPri = 50;
-let sumInt = 0;
-let sumPrac = 0;
-let point = 0;
-
-// 체크유무 확인하는 기능 만들기
 function resultText() {
     let myPurchase;
     let purchaseDetail;
@@ -67,75 +60,91 @@ function resultText() {
     mytest.innerText = mytestText;
     mytestDetail.innerText = purchaseDetail;
 
-    resultInner.style.display = "block";
-    mytest.style.display = "block";
-    mytestDetail.style.display = "block";
+    // resultInner.style.display = "block";
+    // mytest.style.display = "block";
+    // mytestDetail.style.display = "block";
     surveyWrap.style.display = "none";
 }
 
+const intResult = document.getElementById("intResult");
 function resultInt() {
     let myInt;
+    let myIntNum;
     switch (true) {
         case (sumInt <= 10):
             myInt = `Lv.1`;
+            myIntNum = 1;
             break;
         case (sumInt <= 20):
             myInt = `Lv.2`;
+            myIntNum = 2;
             break;
         case (sumInt <= 30):
             myInt = `Lv.3`;
+            myIntNum = 3;
             break;
         case (sumInt <= 40):
             myInt = `Lv.4`;
+            myIntNum = 4;
             break;
         case (sumInt <= 50):
             myInt = `Lv.5`;
+            myIntNum = 5;
             break;
         default:
             myInt = `에러!`;
             break;
     }
     intResult.innerText = myInt;
-    intResult.style.display = "block";
+
 }
 
+const diffInner = document.getElementById("diffInner");
+let diffGagePoint;
 function diffReult() {
     let diffPoint = Math.abs(PerPripoint - sumPrac);
     let diffText;
     switch (true) {
         case (diffPoint > 40):
-            diffText = `매우불일치`;
+            diffText = `매우불일치`; diffGagePoint = 0;
             console.log(diffPoint);
             break;
         case (diffPoint <= 10):
-            diffText = `매우일치`;
+            diffText = `매우일치`; diffGagePoint = 5;
             console.log(diffPoint);
             break;
         case (diffPoint <= 20):
-            diffText = `일치`;
+            diffText = `일치`; diffGagePoint = 4;
             console.log(diffPoint);
             break;
         case (diffPoint <= 30):
-            diffText = `보통`;
+            diffText = `보통`; diffGagePoint = 3;
             console.log(diffPoint);
             break;
         case (diffPoint <= 40):
-            diffText = `불일치`;
+            diffText = `불일치`; diffGagePoint = 2;
             console.log(diffPoint);
             break;
         default:
             diffText = `에러!`;
-            console.log(diffPoint);
             break;
     }
+
+    diffGagePoint = 3;
+
     diffInner.innerText = diffText;
-    diffInner.style.display = "block";
 }
 
 const ckPer = new Array(5);
 const ckPri = new Array(5);
 const ckInt = new Array(5);
 const ckPrac = new Array(5);
+// per와 pri는 기본값50
+let sumPer = 50;
+let sumPri = 50;
+let sumInt = 0;
+let sumPrac = 0;
+let point = 0;
 let i, j, k, l;
 function calSum() {
     // 궁금점 : ckPer는 2차원 배열선언을 안한거같은데 알아서 2차원으로 인식함
@@ -172,11 +181,18 @@ function calSum() {
     }
     PerPripoint = sumPri - sumPer;
 }
+
+const diffGageBar = document.getElementsByClassName("diffGageBar");
+function diffGage() {
+    diffGageBar[0].value = diffGagePoint;
+}
+
+const testResult = document.getElementsByClassName("testResult");
 function totalSum() {
     calSum();
     resultText();
     resultInt();
     diffReult();
+    diffGage();
+    testResult[0].style.display = "block";
 }
-
-// 원래는 펑션별로 가격, 성능 등 값을 따로 구현하려다가 버튼 하나로 모든 펑션을 제어할 수 없어서 펑션을 통합함

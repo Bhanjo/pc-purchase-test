@@ -26,7 +26,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-    font-family: sans-serif;
+	background-color: #cccccc;
 }
 ol, ul {
 	list-style: none;
@@ -42,24 +42,32 @@ q:before, q:after {
 
 /* 콘텐츠 스타일 */
 .mainWrap {
-	width: 100%;
-	background-color: #3abd44;
-	margin: 0 auto;
-	font-size: 1.5rem;
+	margin: auto auto;
+	font-size: 1.7rem;
+	width: 1600px;
+	height: 1200px;
+	background-image: url(img/monitorBG.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: auto; /* 마진 버그 해결 */
 }
 #surveyWrap {
-	margin: 0 auto;
-	width: 80%;
-	background-color: rgb(248, 255, 210);
+	margin: 8rem auto 0 auto;
+	background-color: rgb(211, 140, 140);
+	width: 900px;
+	height: 500px;
+	/* min-width: 800px; */
 }
 .questionInner {
 	margin: 0 auto;
 	padding: 3rem 0rem;
-	width: 80%;
+	width: 100%;
+	/* max-width: 800px; */
 	background-color: #ececec;
 }
 .progressbar {
 	text-align: center;
+	font-size: 3rem;
 	margin: 0 auto;
 }
 .questionPart{
@@ -81,6 +89,12 @@ q:before, q:after {
 	flex-wrap: wrap;
 	margin-top: 0.7rem;
 	align-items: center;
+	margin: 1rem auto;
+}
+.answerList label:hover {
+	cursor: pointer;
+	background-color: #cfcfcf;
+	transition-duration: 0.5s;
 }
 label {
 	display: inline-block;
@@ -90,18 +104,14 @@ label {
 }
 .labelImg {
 	background-image: url("img/deBtn48.png");
-	background-size: 27px;
+	background-size: 30px;
 }
 .labelImg a{
-	margin-left: 2rem;
+	margin-left: 2.5rem;
+	font-size: 2rem;
 }
 input:checked + .labelImg{
 	background-image: url("img/ckBtn48.png") 
-}
-.answerList label:hover {
-	cursor: pointer;
-	background-color: #cfcfcf;
-	transition-duration: 0.5s;
 }
 .pageBtn {
 	/* background-color: red; */
@@ -122,4 +132,27 @@ input:checked + .labelImg{
 }
 .nextBtn {
 	margin-left: 3.5rem;
+}
+.testResult {
+	margin: 6rem auto;
+	/* padding: 2rem 0; */
+	width: 60%;
+	background-color: bisque;
+}
+.testResult div {
+	margin: 2.5rem auto;
+	text-align: center;
+}
+.diffGageBar {
+	margin: 0 auto;
+	width: 50%;
+	height: 50px;
+}
+meter::-webkit-meter-bar {
+	background: #f3f3f3;
+	box-shadow: #e2e2e2 3px 3px;
+	border-radius: 5px;
+}
+meter::-webkit-meter-optimum-value {
+	background-color: #5b9ef5;
 }
