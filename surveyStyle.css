@@ -74,13 +74,29 @@ q:before, q:after {
 }
 .answerPart input {
 	/* 추후 이미지로 구현하기 */
-	/* display: none; */
+	display: none;
 }
 .answerList {
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 0.7rem;
 	align-items: center;
+}
+label {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size:23px auto;
+	/* width:23px;height:10rem; */
+}
+.labelImg {
+	background-image: url("img/deBtn48.png");
+	background-size: 27px;
+}
+.labelImg a{
+	margin-left: 2rem;
+}
+input:checked + .labelImg{
+	background-image: url("img/ckBtn48.png") 
 }
 .answerList label:hover {
 	cursor: pointer;
@@ -94,7 +110,7 @@ q:before, q:after {
 	font-size: 2rem;
 }
 .previousBtn, .nextBtn {
-	/* text-align: center; */
+	
 }
 .submitBtn {
 	width: 15%;

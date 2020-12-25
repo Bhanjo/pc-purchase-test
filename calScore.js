@@ -143,31 +143,31 @@ function calSum() {
         ckPer[i] = document.getElementsByName("ckPer" + i)
         if (ckPer[i][0].checked == true) {
             sumPer += 10;
-            console.log(sumPer)
+            console.log("퍼포먼스 : " + sumPer);
         }
     }
     for (j = 1; j <= 5; j++) {
         ckPri[j] = document.getElementsByName("ckPri" + j)
         if (ckPri[j][0].checked == true) {
             sumPri += 10;
-            console.log(sumPri)
+            console.log("가격점수 : " + sumPri);
         }
     }
     for (k = 1; k <= 5; k++) {
         ckInt[k] = document.getElementsByName("ckInt" + k)
         if (ckInt[k][1].checked == true) {
             sumInt += 10;
-            console.log(sumInt)
+            console.log("지식점수 : " + sumInt);
         }
     }
     for (l = 1; l <= 5; l++) {
         ckPrac[l] = document.getElementsByName("ckPrac" + l)
         if (ckPrac[l][1].checked == true) {
             sumPrac += 10;
-            console.log(sumPrac)
+            console.log("실용성 : " + sumPrac);
         } else if (ckPrac[l][0].checked == true) {
             sumPrac -= 10;
-            console.log(sumPrac)
+            console.log("실용성 : " + sumPrac);
         }
     }
     PerPripoint = sumPri - sumPer;
@@ -178,10 +178,5 @@ function totalSum() {
     resultInt();
     diffReult();
 }
-
-// 답변클릭 이벤트
-// function btnChange() {
-//     deBtn.src="img/ckBtn23.png";
-// }
 
 // 원래는 펑션별로 가격, 성능 등 값을 따로 구현하려다가 버튼 하나로 모든 펑션을 제어할 수 없어서 펑션을 통합함
