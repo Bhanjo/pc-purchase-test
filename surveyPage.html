@@ -360,17 +360,24 @@
             </div>
         </div>
 
-            <div class="testResult">
-                <div id="resultInner">결과입니다.(추후삭제)</div>
-                <div id="mytest">성향파악</div>
-                <div id="mytestDetail">성향 상세설명</div>
-    
-                <div id="intResult">지식평가</div>
-    
+            <div class="testResult" style="display: none;">
+                <!-- <div id="resultInner">결과입니다.(추후삭제)</div> -->
+                <div class="mytestInner">
+                    <div id="mytest">성향파악</div>
+                    <div id="mytestDetail">성향 상세설명</div>
+                </div>
+                <hr>
+                <div class="intInner">
+                    <!-- <h3>지식</h3> -->
+                    <div id="intResult">지식평가</div>
+                </div>
+
                 <div class="diffPart">
+                    <h3>답변신뢰도</h3>
                     <meter class="diffGageBar" value="0" max="5"></meter>
                     <div id="diffInner">성향과 현실성의 일치여부</div>
                 </div>
+
             </div>
         
     </div>

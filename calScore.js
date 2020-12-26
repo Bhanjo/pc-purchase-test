@@ -15,7 +15,7 @@ function resultText() {
     let purchaseDetail;
     switch (true) {
         case (PerPripoint <= -31):
-            myPurchase = `누구보다 빠르게 더 빠르게 <얼리어뎁터>`;
+            myPurchase = `누구보다 빠르게 더 빠르게<br><얼리어뎁터>`;
             purchaseDetail = `컴퓨터에 관심을 넘어선 애정을 가지고 있습니다.
             백화점이나 대형마트에 가면 가장먼저 전자제품 코너에 직행하는 당신!
             새로운 그래픽카드나 CPU가 나오면 벌써부터 자신의 컴퓨터가 구시대처럼 느껴지기도 합니다
@@ -23,28 +23,28 @@ function resultText() {
             하지만 과유불급, 가끔은 본인의 목적과 지갑사정을 되돌아보면 어떨까요?`;
             break;
         case (PerPripoint <= -11):
-            myPurchase = `컴퓨터는 나의 친구 <매니아>`;
+            myPurchase = `컴퓨터는 나의 친구<br><매니아>`;
             purchaseDetail = `컴퓨터에 상당한 관심을 가지고있습니다.
             다른 지인들보다 더 좋은 사양의 컴퓨터를 가지고 있는 경우가 많습니다.
             혹시 최신 사양에 못미치더라도 그에 준하는 고사양 PC를 가지고있지 않나요?
             하지만 떄론 가끔씩 보이는 초고사양 컴퓨터를 보고 선망의 시선을 보내기도합니다..`;
             break;
         case (PerPripoint <= 10):
-            myPurchase = `성능과 가격 뭐하나 포기못해 <밸런스 마스터>`;
+            myPurchase = `성능과 가격 뭐하나 포기못해<br><밸런스 마스터>`;
             purchaseDetail = `흔히 말하는 가성비를 많이 따집니다.
             그래서 성능과 가격 둘 다 챙기기 위해 여러 방면으로 조언을 구하는데
             이때문에 컴퓨터 구매시 며칠이나 고심끝에 결정하는 모습을 보이네요..
             너무 고민하다 결국 이도저도 아닌 컴퓨터가 되지 않게 조심하세요!`;
             break;
         case (PerPripoint <= 30):
-            myPurchase = `싸고 좋은걸 찾기위해 <하이에나>`;
+            myPurchase = `싸고 좋은걸 찾기위해<br><하이에나>`;
             purchaseDetail = `싼 제품을 위해서라면 고난과 역경에 맞서싸웁니다.
             단 1만원 차이라도 용서못하며 이를 위해 몇날 며칠이고 기다릴 인내 또한 가지고 있네요
             이를 위해 당X마켓이나 다X와에 폭풍 검색을 하기도 합니다.
             하지만 이때문에 퀄리티가 낮은 제품을 골라 낭패를 보지 않게 많은 주의가 필요합니다!`;
             break;
         case (PerPripoint <= 50):
-            myPurchase = `내 돈은 절대 못준다 <머니 디팬더>`;
+            myPurchase = `내 돈은 절대 못준다<br><머니 디팬더>`;
             purchaseDetail = `컴퓨터에 대한 투자를 아끼는 경향이 있습니다.
             한번 장만한 컴퓨터는 고장나기 전까지 쓸 정도로 절약정신 또한 가지고 있네요.
             이런 경우 컴퓨터에 대한 관심이 크게 없는 사람이 많습니다.
@@ -54,10 +54,10 @@ function resultText() {
             myPurchase = `에러! 케이스값의 예외발생`;
             break;
     }
-    const mytestText = `당신의 성향은? ${myPurchase}`;
-    const totalResult = `성향점수 : ${PerPripoint}, 실용성 : ${sumPrac}, 지식 : ${sumInt}`;
-    resultInner.innerText = totalResult;
-    mytest.innerText = mytestText;
+    const mytestText = `<h3>당신의 성향은?</h3><img src="img/deimg.png"><br><a>${myPurchase}</a>`;
+    // const totalResult = `성향점수 : ${PerPripoint}, 실용성 : ${sumPrac}, 지식 : ${sumInt}`;
+    // resultInner.innerText = totalResult;
+    mytest.innerHTML = mytestText;
     mytestDetail.innerText = purchaseDetail;
 
     // resultInner.style.display = "block";
@@ -95,7 +95,7 @@ function resultInt() {
             myInt = `에러!`;
             break;
     }
-    intResult.innerText = myInt;
+    intResult.innerHTML = `<a>지식 : ${myInt}</a>`;
 
 }
 
@@ -129,10 +129,8 @@ function diffReult() {
             diffText = `에러!`;
             break;
     }
-
-    diffGagePoint = 3;
-
-    diffInner.innerText = diffText;
+    // diffGagePoint = 3;
+    diffInner.innerHTML = `<a>${diffText}</a>`;
 }
 
 const ckPer = new Array(5);
