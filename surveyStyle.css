@@ -35,7 +35,7 @@ body {
 	-khtml-user-select: none;
 	user-select:none;
     line-height: 1;
-	background-color: #fafafa;
+	background-color: #dfdfdf;
 	font-family: 'Gamja Flower', 'Nanum Gothic', 'Jua', 'Do Hyeon', sans-serif;
 }
 ol, ul {
@@ -50,13 +50,141 @@ q:before, q:after {
     content: none;
 }
 
-/* 콘텐츠 스타일 */
-@media (min-width: 768px) {
-	.mainWrap {
-		/* overflow: hidden; */
-		/* margin: 0 auto; */
-	}
+/* 컨텐츠 */
+.mainWrap {
+	
+}
 
+#surveyWrap {
+	background-image: url(img/note700.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 1000px;
+	margin: 25% auto;
+	padding: 15rem 0rem 0rem 0rem;
+}
+.questionInner {
+	margin: 0 auto;
+	padding: 3rem 0rem 2rem 0rem;
+	width: 100%;
+}
+.progressbar {
+	text-align: center;
+	font-size: 3rem;
+	margin: 0 auto;
+}
+.questionPart{
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+}
+.answerPart {
+	text-align: left;
+	margin-left: 7rem;
+	padding-top: 2rem;
+}
+.answerPart input {
+	display: none;
+}
+.answerList {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 0.7rem;
+	align-items: center;
+	margin: 1rem auto;
+}
+.answerList label:hover {
+	cursor: pointer;
+	background-color: #cfcfcf;
+	transition-duration: 0.5s;
+}
+label {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size:23px auto;
+	margin: 1.8rem 0;
+}
+.labelImg {
+	background-image: url("img/deBtn48.png");
+	background-size: 40px;
+}
+.labelImg a{
+	margin-left: 4rem;
+	font-size: 2.5rem;
+}
+input:checked + .labelImg{
+	background-image: url("img/ckBtn48.png") 
+}
+.pageBtn {
+	margin: 0.5rem auto;
+	text-align: center;
+	font-size: 2.5rem;
+}
+.pageBtn a, .pageBtn h3 {
+	border: 3px black solid;
+	border-radius: 20px;
+}
+.pageBtn a {
+	padding: 0.1rem 2.8rem;
+}
+.submitBtn {
+	width: 15%;
+	padding: 0.1rem 0;
+	margin: 1rem auto 0 auto;
+}
+.previousBtn:hover, .nextBtn:hover, .submitBtn:hover {
+	cursor: pointer;
+}
+.nextBtn {
+	margin-left: 3.5rem;
+}
+.testResult {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0rem auto;
+	font-size: 1.7rem;
+	background-image: url(img/note700.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 800px;
+	padding-top: 11rem;
+}
+.testResult h3 {
+	font-weight: bold;
+	font-size: 2.5rem;
+}
+.testResult div {
+	text-align: center;
+}
+#mytest{
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+.mytestInner {
+	margin-bottom: 2rem;
+}
+.diffGageBar {
+	margin: 0 auto;
+	width: 25%;
+	height: 50px;
+}
+.intInner {
+	
+}
+.intInner a{
+	font-size: 2rem;
+	font-weight: bold;
+}
+meter::-webkit-meter-bar {
+	background: #f3f3f3;
+	box-shadow: #e2e2e2 3px 3px;
+	border-radius: 5px;
+}
+meter::-webkit-meter-optimum-value {
+	background-color: #5b9ef5;
+}
+
+@media (min-width: 768px) {
 	#surveyWrap {
 		background-image: url(img/note700.png);
 		background-repeat: no-repeat;
@@ -64,139 +192,31 @@ q:before, q:after {
 		height: 1000px;
 		margin: 25% auto;
 		padding: 15rem 0rem 0rem 0rem;
-		/* border: 1px black solid; */
-		
-	}
-	.questionInner {
-		margin: 0 auto;
-		padding: 3rem 0rem 2rem 0rem;
-		width: 100%;
-	}
-	.progressbar {
-		text-align: center;
-		font-size: 3rem;
-		margin: 0 auto;
-	}
-	.questionPart{
-		text-align: center;
-		font-size: 2rem;
-		font-weight: bold;
-	}
-	.answerPart {
-		/* font-size: 2.5rem; */
-		text-align: left;
-		margin-left: 7rem;
-		padding-top: 2rem;
-	}
-	.answerPart input {
-		/* 추후 이미지로 구현하기 */
-		display: none;
-	}
-	.answerList {
-		display: flex;
-		flex-wrap: wrap;
-		margin-top: 0.7rem;
-		align-items: center;
-		margin: 1rem auto;
-	}
-	.answerList label:hover {
-		cursor: pointer;
-		background-color: #cfcfcf;
-		transition-duration: 0.5s;
-	}
-	label {
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-size:23px auto;
-		margin: 1.8rem 0;
-	}
-	.labelImg {
-		background-image: url("img/deBtn48.png");
-		background-size: 40px;
-	}
-	.labelImg a{
-		margin-left: 4rem;
-		font-size: 2.5rem;
-	}
-	input:checked + .labelImg{
-		background-image: url("img/ckBtn48.png") 
-	}
-	.pageBtn {
-		/* background-color: red; */
-		margin: 0.5rem auto;
-		text-align: center;
-		font-size: 2.5rem;
-	}
-	.pageBtn a, .pageBtn h3 {
-		border: 3px black solid;
-		border-radius: 20px;
-	}
-	.pageBtn a {
-		padding: 0.1rem 2.8rem;
-	}
-	.submitBtn {
-		width: 15%;
-		padding: 0.1rem 0;
-		margin: 1rem auto 0 auto;
-	}
-	.previousBtn:hover, .nextBtn:hover, .submitBtn:hover {
-		cursor: pointer;
-	}
-	.nextBtn {
-		margin-left: 3.5rem;
-	}
-	.testResult {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 5rem auto;
-		width: 60%;
-		/* height: 400px; */
-		/* background-color: rgb(255, 0, 0); */
-		font-size: 1.7rem;
-	}
-	.testResult h3 {
-		font-weight: bold;
-		font-size: 2.5rem;
-	}
-	#mytest{
-		font-weight: bold;
-		margin-bottom: 1rem;
-	}
-	.mytestInner {
-		margin-bottom: 2rem;
-	}
-	.testResult div {
-		/* margin: 0 auto 0 auto; */
-		text-align: center;
-	}
-	.diffGageBar {
-		margin: 0 auto;
-		width: 25%;
-		height: 50px;
-	}
-	.intInner {
-		/* margin: 1rem; */
-	}
-	.intInner a{
-		font-size: 2rem;
-		font-weight: bold;
-	}
-	meter::-webkit-meter-bar {
-		background: #f3f3f3;
-		box-shadow: #e2e2e2 3px 3px;
-		border-radius: 5px;
-	}
-	meter::-webkit-meter-optimum-value {
-		background-color: #5b9ef5;
 	}
 }
 @media (min-width: 1024) {
 	
 }
 @media (min-width: 1280px) {
-	hr {
-		width: 50%;
+	#surveyWrap {
+		background-image: url(img/note700.png);
+		background-repeat: no-repeat;
+		background-size: 100% 70%;
+		padding-top: 9rem;
+		margin: 0 auto;
+		width: 1000px;
 	}
+	label {
+		margin: 1.8rem 2rem;
+	}
+	.labelImg {
+		background-size: 30px;
+	}
+	.labelImg a{
+		font-size: 2rem;
+	}
+}
+@media (min-width: 1920px) {
 	.mainWrap {
 		margin: auto auto;
 		font-size: 1.7rem;
@@ -205,139 +225,21 @@ q:before, q:after {
 		background-image: url(img/monitorBG.png);
 		background-repeat: no-repeat;
 		background-size: 100%;
-		overflow: auto; /* 마진 버그 해결 */
+		overflow: auto;
 	}
 	#surveyWrap {
 		margin: 5rem auto 0 auto;
-		/* background-color: rgb(218, 218, 218); */
+		padding: 0;
 		background-image: none;
 		width: 1000px;
 		height: 400px;
-	}
-	.questionInner {
-		margin: 0 auto;
-		padding: 3rem 0rem 2rem 0rem;
-		width: 100%;
-		/* background-color: #ececec; */
-	}
-	.progressbar {
-		text-align: center;
-		font-size: 3rem;
-		margin: 0 auto;
 	}
 	.questionPart{
 		text-align: center;
 		font-size: 3rem;
 		font-weight: bold;
 	}
-	.answerPart {
-		/* font-size: 2.5rem; */
-		text-align: left;
-		margin-left: 7rem;
-		padding-top: 2rem;
-	}
-	.answerPart input {
-		/* 추후 이미지로 구현하기 */
-		display: none;
-	}
-	.answerList {
-		display: flex;
-		flex-wrap: wrap;
-		margin-top: 0.7rem;
-		align-items: center;
-		margin: 1rem auto;
-	}
-	.answerList label:hover {
-		cursor: pointer;
-		background-color: #cfcfcf;
-		transition-duration: 0.5s;
-	}
-	label {
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-size:23px auto;
-		margin: 1.8rem 0;
-	}
-	.labelImg {
-		background-image: url("img/deBtn48.png");
-		background-size: 40px;
-	}
 	.labelImg a{
-		margin-left: 4rem;
 		font-size: 2.8rem;
 	}
-	input:checked + .labelImg{
-		background-image: url("img/ckBtn48.png") 
-	}
-	.pageBtn {
-		/* background-color: red; */
-		margin: 0.5rem auto;
-		text-align: center;
-		font-size: 2.5rem;
-	}
-	.pageBtn a, .pageBtn h3 {
-		border: 3px black solid;
-		border-radius: 20px;
-	}
-	.pageBtn a {
-		padding: 0.1rem 2.8rem;
-	}
-	.submitBtn {
-		width: 15%;
-		padding: 0.1rem 0;
-		margin: 1rem auto 0 auto;
-	}
-	.previousBtn:hover, .nextBtn:hover, .submitBtn:hover {
-		cursor: pointer;
-	}
-	.nextBtn {
-		margin-left: 3.5rem;
-	}
-	.testResult {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 5rem auto;
-		width: 60%;
-		/* height: 400px; */
-		/* background-color: rgb(255, 0, 0); */
-		font-size: 1.7rem;
-	}
-	.testResult h3 {
-		font-weight: bold;
-		font-size: 2.5rem;
-	}
-	#mytest{
-		font-weight: bold;
-		margin-bottom: 1rem;
-	}
-	.mytestInner {
-		margin-bottom: 2rem;
-	}
-	.testResult div {
-		/* margin: 0 auto 0 auto; */
-		text-align: center;
-	}
-	.diffGageBar {
-		margin: 0 auto;
-		width: 25%;
-		height: 50px;
-	}
-	.intInner {
-		/* margin: 1rem; */
-	}
-	.intInner a{
-		font-size: 2rem;
-		font-weight: bold;
-	}
-	meter::-webkit-meter-bar {
-		background: #f3f3f3;
-		box-shadow: #e2e2e2 3px 3px;
-		border-radius: 5px;
-	}
-	meter::-webkit-meter-optimum-value {
-		background-color: #5b9ef5;
-	}
-}
-@media (min-width: 1920px) {
-	
 }

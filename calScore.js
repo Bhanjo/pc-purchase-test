@@ -2,10 +2,6 @@
 // 원래는 펑션별로 가격, 성능 등 값을 따로 구현하려다가 버튼 하나로 모든 펑션을 제어할 수 없어서 펑션을 통합함
 // 체크유무 확인하는 기능 만들기
 
-// const intInner = document.getElementsByClassName("intInner");
-// const deBtn = document.getElementById("deBtn");
-// const ckBtn = document.getElementById("ckBtn");
-
 const resultInner = document.getElementById("resultInner");
 const mytest = document.getElementById("mytest");
 const mytestDetail = document.getElementById("mytestDetail");
@@ -186,6 +182,7 @@ function diffGage() {
 }
 
 const testResult = document.getElementsByClassName("testResult");
+const mainWrap = document.getElementsByClassName("mainWrap");
 function totalSum() {
     calSum();
     resultText();
@@ -193,4 +190,5 @@ function totalSum() {
     diffReult();
     diffGage();
     testResult[0].style.display = "block";
+    mainWrap[0].style.backgroundImage = "none";
 }
