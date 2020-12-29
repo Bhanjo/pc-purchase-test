@@ -184,7 +184,7 @@ function totalSum() {
     resultText();
     resultInt();
     diffReult();
-    diffGage();
+    // diffGage();
     testResult[0].style.display = "block";
     mainWrap[0].style.backgroundImage = "none";
 }
