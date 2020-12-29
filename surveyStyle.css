@@ -60,7 +60,7 @@ q:before, q:after {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	height: 1000px;
-	margin: 25% auto;
+	/* margin: 25% auto 0 auto; */
 	padding: 15rem 0rem 0rem 0rem;
 }
 .questionInner {
@@ -141,13 +141,13 @@ input:checked + .labelImg{
 .testResult {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0rem auto;
+	margin: 0 auto;
 	font-size: 1.7rem;
 	background-image: url(img/note700.png);
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	height: 800px;
-	padding-top: 11rem;
+	background-size: 105% 90%;
+	height: 1000px;
+	padding-top: 13rem;
 }
 .testResult h3 {
 	font-weight: bold;
@@ -186,12 +186,11 @@ meter::-webkit-meter-optimum-value {
 
 @media (min-width: 768px) {
 	#surveyWrap {
-		background-image: url(img/note700.png);
-		background-repeat: no-repeat;
-		background-size: 100%;
 		height: 1000px;
-		margin: 25% auto;
 		padding: 15rem 0rem 0rem 0rem;
+	}
+	.testResult {
+		
 	}
 }
 @media (min-width: 1024) {
@@ -199,8 +198,6 @@ meter::-webkit-meter-optimum-value {
 }
 @media (min-width: 1280px) {
 	#surveyWrap {
-		background-image: url(img/note700.png);
-		background-repeat: no-repeat;
 		background-size: 100% 70%;
 		padding-top: 9rem;
 		margin: 0 auto;
@@ -215,15 +212,18 @@ meter::-webkit-meter-optimum-value {
 	.labelImg a{
 		font-size: 2rem;
 	}
+	.testResult {
+		font-size: 2rem;
+	}
 }
 @media (min-width: 1920px) {
 	.mainWrap {
+		background-image: url(img/monitorBG.png);
+		background-repeat: no-repeat;
 		margin: auto auto;
 		font-size: 1.7rem;
 		width: 1600px;
 		height: 1200px;
-		background-image: url(img/monitorBG.png);
-		background-repeat: no-repeat;
 		background-size: 100%;
 		overflow: auto;
 	}
@@ -241,5 +241,8 @@ meter::-webkit-meter-optimum-value {
 	}
 	.labelImg a{
 		font-size: 2.8rem;
+	}
+	.testResult {
+		font-size: 2.6rem;
 	}
 }

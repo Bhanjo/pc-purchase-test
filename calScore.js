@@ -55,10 +55,6 @@ function resultText() {
     // resultInner.innerText = totalResult;
     mytest.innerHTML = mytestText;
     mytestDetail.innerText = purchaseDetail;
-
-    // resultInner.style.display = "block";
-    // mytest.style.display = "block";
-    // mytestDetail.style.display = "block";
     surveyWrap.style.display = "none";
 }
 
