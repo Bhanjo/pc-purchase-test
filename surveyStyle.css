@@ -146,7 +146,7 @@ input:checked + .labelImg{
 	background-repeat: no-repeat;
 	background-size: 105% 90%;
 	width: 1000px;
-	height: 980px;
+	height: 500px;
 	padding-top: 13rem;
 }
 .testResult h3 {
@@ -276,8 +276,8 @@ meter::-webkit-meter-optimum-value {
 		font-size: 1.7rem;
 		background-image: url(img/note700.png);
 		background-repeat: no-repeat;
-		background-size: 105% 90%;
-		height: 980px;
+		background-size: 105% 95%;
+		height: 750px;
 		padding-top: 13rem;
 	}
 	.testResult h3 {
@@ -297,11 +297,6 @@ meter::-webkit-meter-optimum-value {
 	.diffPart {
 		margin-top: 2rem;
 	}
-	/* .diffGageBar {
-		margin: 0 auto;
-		width: 25%;
-		height: 50px;
-	} */
 	.intInner {
 		
 	}
@@ -355,7 +350,7 @@ meter::-webkit-meter-optimum-value {
 		font-size: 2.5rem;
 	}
 	.testResult {
-		/* font-size: 2rem; */
+
 	}
 }
 @media screen and (min-width: 1920px) {
@@ -371,6 +366,7 @@ meter::-webkit-meter-optimum-value {
 		margin: 5rem auto 0 auto;
 		padding: 0;
 		background-image: none;
+		height: 900px;
 	}
 	.questionPart{
 		text-align: center;
@@ -381,6 +377,6 @@ meter::-webkit-meter-optimum-value {
 		font-size: 2.8rem;
 	}
 	.testResult {
-		/* font-size: 2.6rem; */
+
 	}
 }
