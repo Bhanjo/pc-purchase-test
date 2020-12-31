@@ -141,12 +141,12 @@ input:checked + .labelImg{
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 auto;
-	font-size: 1.7rem;
+	font-size: 1.5rem;
 	background-image: url(img/note700.png);
 	background-repeat: no-repeat;
-	background-size: 105% 90%;
+	background-size: 105% 95%;
 	width: 1000px;
-	height: 800px;
+	height: 770px;
 	padding-top: 13rem;
 }
 .testResult h3 {
@@ -186,7 +186,9 @@ meter::-webkit-meter-bar {
 meter::-webkit-meter-optimum-value {
 	background-color: #5b9ef5;
 }
-
+.characterSize {
+	height: 210px;
+}
 
 @media screen and (min-width: 768px) {
 	.mainWrap {
@@ -273,11 +275,12 @@ meter::-webkit-meter-optimum-value {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 auto;
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 		background-image: url(img/note700.png);
 		background-repeat: no-repeat;
 		background-size: 105% 95%;
-		height: 800px;
+		/* width: 1000px;
+		height: 850px; */
 		padding-top: 13rem;
 	}
 	.testResult h3 {
@@ -330,7 +333,7 @@ meter::-webkit-meter-optimum-value {
 		font-size: 2.5rem;
 	}
 	.testResult {
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 	}
 }
 @media screen and (min-width: 1280px) {
