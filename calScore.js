@@ -12,16 +12,16 @@ function resultText() {
     let purchaseDetail;
     let characterImg;
     switch (true) {
-        case (PerPripoint <= -31):
+        case (PerPripoint <= -30):
             myPurchase = `누구보다 빠르게 더 빠르게<br><얼리어뎁터>`;
             purchaseDetail = `컴퓨터에 관심을 넘어선 애정을 가지고 있습니다.
             백화점이나 대형마트에 가면 가장먼저 전자제품 코너에 직행하는 당신!
             새로운게 나오면 벌써부터 자신의 컴퓨터가 구시대처럼 느껴지기도 합니다
             게다가 이미 고사양 컴퓨터를 더욱 업그레이드 하는 모습을 보이네요..
             하지만 과유불급, 가끔은 본인의 목적과 지갑사정을 되돌아보면 어떨까요?`;
-            characterImg = `<img class="characterSize" src="img/deimg.png">`;
+            characterImg = `<img class="characterSize" src="img/character_1.png">`;
             break;
-        case (PerPripoint <= -11):
+        case (PerPripoint <= -10):
             myPurchase = `컴퓨터는 나의 친구<br><매니아>`;
             purchaseDetail = `컴퓨터에 상당한 관심을 가지고있습니다.
             다른 지인들보다 더 좋은 사양의 컴퓨터를 가지고 있는 경우가 많습니다.
@@ -35,7 +35,7 @@ function resultText() {
             그래서 성능과 가격 둘 다 챙기기 위해 여러 방면으로 조언을 구하는데
             이때문에 컴퓨터 구매시 며칠이나 고심끝에 결정하는 모습을 보이네요..
             너무 고민하다 결국 이도저도 아닌 컴퓨터가 되지 않게 조심하세요!`;
-            characterImg = `<img  class="characterSize" src="img/deimg.png">`;
+            characterImg = `<img  class="characterSize" src="img/character_3.png">`;
             break;
         case (PerPripoint <= 30):
             myPurchase = `싸고 좋은걸 찾기위해<br><하이에나>`;
