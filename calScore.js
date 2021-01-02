@@ -13,7 +13,7 @@ function resultText() {
     let characterImg;
     switch (true) {
         case (PerPripoint <= -30):
-            myPurchase = `누구보다 빠르게 더 빠르게<br><얼리어뎁터>`;
+            myPurchase = `누구보다 빠르게 더 빠르게<br><얼리어답터>`;
             purchaseDetail = `컴퓨터에 관심을 넘어선 애정을 가지고 있습니다.
             백화점이나 대형마트에 가면 가장먼저 전자제품 코너에 직행하는 당신!
             새로운게 나오면 벌써부터 자신의 컴퓨터가 구시대처럼 느껴지기도 합니다
